@@ -8,7 +8,21 @@ body {
 }
 
 body {
-  background-color: lightgray
+  background-color: lightgray;
+  
+}
+
+
+.bronx {
+  text-align: center;
+}
+
+.options {
+  height: 40px;
+  margin-bottom: 50px;
+  background-color: darkslateblue;
+  font-size: 20px;
+  color: white;
 }
 
 .welcome {
@@ -54,6 +68,29 @@ code {
   text-decoration: none;
   size: 80px;
   padding: 4px;
+}
+
+.navlink-restaurant {
+  align-content: center;
+  color: white;
+  text-decoration: none;
+  margin: auto;
+}
+
+.restaurants {
+  height: 50px;
+  font-size: 20px;
+  background-color: darkslateblue;
+  color: white;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 560px;
+  text-decoration: none;
+  width: 300px;
+  padding-top: 10px;
+  line-break: normal
+  
 }
 
 
