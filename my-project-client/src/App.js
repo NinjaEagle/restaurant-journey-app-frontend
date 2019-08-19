@@ -9,6 +9,7 @@ import Bronx from "./components/Bronx"
 import Scoreboard from "./components/Scoreboard"
 import Profile from "./components/Profile"
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Restaurant from './components/Restaurant';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
             <Route path="/profile" component={Profile}></Route>
             <Route path="/leaderboard" component={Scoreboard}></Route>
             <Route path="/login" component={LoginPage}></Route>
+            <Route path="/restaurant" component={Restaurant}></Route>
       </header>
     </div>
     </Router>
