@@ -7,7 +7,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  background-color: grey;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.navbar {
+  border-style: double;
+  border-width: 5px;
+  height: 70px;
+  background-color: darkslateblue;
+}
+
+.buttons {
+  margin-top: 25px;
 }

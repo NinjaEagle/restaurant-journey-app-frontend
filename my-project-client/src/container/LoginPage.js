@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import anime from "animejs/lib/anime.es.js";
 import "../style.scss";
 class LoginPage extends Component {
+
     state ={
         username: '',
         password: ''
@@ -37,9 +38,11 @@ class LoginPage extends Component {
     //     }
     // }
     
+
     render() {
         // console.log(this.state.username)
         return (
+
           <div>
             <h1 class="title">NYC Restaurant Journey</h1>
             <form onChange={this.handleLogin}>
