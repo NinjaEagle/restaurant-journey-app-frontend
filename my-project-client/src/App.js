@@ -22,6 +22,7 @@ function App() {
       <Router>
     <div className="App">
       <header className="App-header">
+          <Route path= "/" component={Borough} </Route>
             <Route path="/" component={LoginPage}></Route>
       </header>
     </div>
