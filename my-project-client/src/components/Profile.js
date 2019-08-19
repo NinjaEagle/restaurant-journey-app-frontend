@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component } from 'react'
 
 export default class Profile extends Component {
@@ -13,6 +14,9 @@ export default class Profile extends Component {
 }
 =======
 import React, {Component} from "react"
+=======
+import React, { Component } from 'react'
+>>>>>>> fc88106029e2133fc3372f89ae753f79f1d6e9e8
 
 export default class Profile extends Component {
 
@@ -24,4 +28,8 @@ export default class Profile extends Component {
         )
     }
 }
+<<<<<<< HEAD
 >>>>>>> d4aff397c65a66d56a1cec4326e0c5a290a3356f
+=======
+
+>>>>>>> fc88106029e2133fc3372f89ae753f79f1d6e9e8
