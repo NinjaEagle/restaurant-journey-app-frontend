@@ -5,6 +5,9 @@ import './App.css';
 import LoginPage from  '../src/container/LoginPage';
 import Home from "../src/container/Home"
 import NavBar from "./container/NavBar";
+import Bronx from "./components/Bronx"
+import Scoreboard from "./components/Scoreboard"
+import Profile from "./components/Profile"
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
@@ -17,6 +20,9 @@ function App() {
 
             <NavBar component={NavBar}/>
             <Route exact path="/" component={Home}></Route>
+            <Route path="/bronx" component={Bronx}></Route>
+            <Route path="/profile" component={Profile}></Route>
+            <Route path="/leaderboard" component={Scoreboard}></Route>
             <Route path="/login" component={LoginPage}></Route>
       </header>
     </div>
