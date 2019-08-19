@@ -1,31 +1,31 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
-import LoginPage from  '../container/LoginPage';
-import Restaurants from '../container/Restaurants';
-import Borough from '../components/Borough'
-import Scoreboard from '../components/Scoreboard'
+import LoginPage from  '../src/container/LoginPage';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 function App() {
-  state = {
-    restaurants: [],
-  }
+//   state = {
+//     restaurants: [],
+//   }
 
-  componentDidMount() {
-    fetch('')
-    .then(res => res.json())
-    .then(restaurantsJSON => this.setState({
-      restaurants: restaurantsJSON
-    ))
-  }
+  // componentDidMount() {
+  //   fetch('')
+  //   .then(res => res.json())
+  //   .then(restaurantsJSON => this.setState({
+  //     restaurants: restaurantsJSON
+  //   ))
+  // }
   return (
+      <Router>
     <div className="App">
       <header className="App-header">
-        <LoginPage />
-        <Borough data={this.state.restaurants}/>
-        <Score />
+            <Route path="/login" component={LoginPage}></Route>
       </header>
     </div>
+    </Router>
   );
 }
 
