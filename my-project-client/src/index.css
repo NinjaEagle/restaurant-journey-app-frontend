@@ -44,13 +44,16 @@ code {
 }
 
 .start-button {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   border-radius: 50px;
-  margin-top: 20px;
+  margin-top: 40px;
   background-color: teal;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  size: 80px;
+  padding: 4px;
 }
 
 
