@@ -1,4 +1,6 @@
 import React, {Component} from "react"
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -17,7 +19,8 @@ export default class Home extends Component {
                 <br></br>
                 Choose each restaurant wisely!
                 <br></br>
-                <button className="start-button">Start</button>
+                <br></br>
+                <NavLink to="/bronx" className="start-button"> Start </NavLink>
             </div>
         )
     }
