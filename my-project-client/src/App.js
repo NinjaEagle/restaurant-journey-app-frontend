@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import LoginPage from  '../src/container/LoginPage';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -22,7 +22,7 @@ function App() {
       <Router>
     <div className="App">
       <header className="App-header">
-            <Route path="/login" component={LoginPage}></Route>
+            <Route path="/" component={LoginPage}></Route>
       </header>
     </div>
     </Router>
