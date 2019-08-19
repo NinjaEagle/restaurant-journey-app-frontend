@@ -18,6 +18,8 @@ export default class NavBar extends Component {
         return (
             <div className="navbar">
                 <div className="buttons">
+                        
+                    <span className="title">Restaurant Journey</span>
                         <NavLink to="/" style={link}>Home</NavLink>
                 
                         <NavLink to="/leaderboard" style={link}>Leaderboard</NavLink>
