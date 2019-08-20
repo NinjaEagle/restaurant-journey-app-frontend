@@ -12,6 +12,10 @@ body {
   
 }
 
+img {
+  height: 500px;
+  width: 800px;
+}
 
 .bronx {
   text-align: center;
@@ -91,6 +95,23 @@ code {
   padding-top: 10px;
   line-break: normal
   
+}
+
+.outcome-div {
+  border-style: dashed;
+  background-color: darkslateblue;
+  color: white;
+}
+
+.restaurant {
+  text-align: center;
+}
+
+.restaurant-page {
+  text-align: center;
+  text-shadow: 2px 2px teal;
+  border-style: dotted;
+  border-color: crimson;
 }
 
 
