@@ -49,7 +49,7 @@ export default class Brooklyn extends Component {
 
     render() {
 
-        let cuisineArray = ["Caribbean", "American", "Chinese", "Japanese", "Bagels/Pretzels", "Mexican", "Seafood", "Jewish/Kosher", "Pakistani", "Café/Coffee/Tea", "Italian", "Tapas", "Pizza", "Juice, Smoothies, Fruit Salads", "Salads", "Other", "Delicatessen", "Eastern European", "Spanish", "Thai", "Asian", "Russian", "Polish", "Sandwiches/Salads/Mixed Buffet", "Pizza/Italian", "Turkish", "Donuts", "Chicken", "Bakery"]
+        let cuisineArray = ["Caribbean", "American", "Chinese", "Japanese", "Bagels/Pretzels", "Mexican", "Seafood", "Jewish/Kosher", "Pakistani", "Café/Coffee/Tea", "Italian", "Tapas", "Pizza", "Juice, Smoothies, Fruit Salads", "Salads", "Delicatessen", "Eastern European", "Spanish", "Thai", "Asian", "Russian", "Polish", "Sandwiches/Salads/Mixed Buffet", "Pizza/Italian", "Turkish", "Donuts", "Chicken", "Bakery"]
 
         return (
             <div className="bronx">
