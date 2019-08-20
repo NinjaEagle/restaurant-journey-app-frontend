@@ -77,6 +77,7 @@ export default class Brooklyn extends Component {
                     </h3>
                     <h3>Choose a cuisine!</h3>
                     <select onChange={this.handleSelectCuisine} className="options">
+                    <option value="none">Select an option</option> 
                     {cuisineArray.map(cuisine => <option value={cuisine}>{cuisine}</option>)}
                     </select>
                 </div>

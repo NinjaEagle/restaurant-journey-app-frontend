@@ -78,6 +78,7 @@ export default class Queens extends Component {
                     </h3>
                     <h3>What kind of food would you like to try?</h3>
                     <select onChange={this.handleSelectCuisine} className="options">
+                    <option value="none">Select an option</option> 
                     {cuisineArray.map(cuisine => <option value={cuisine}>{cuisine}</option>)}
                     </select>
                 </div>
