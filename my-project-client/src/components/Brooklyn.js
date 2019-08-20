@@ -1,15 +1,14 @@
 import React, {Component} from "react"
-import FordhamRoad from "./fordham-road.jpg"
 import { NavLink } from 'react-router-dom';
 import Restaurant from "../components/Restaurant"
+import brooklyn from "./brooklyn.jpg"
 
-export default class Bronx extends Component {
+export default class Brooklyn extends Component {
 
     state = {
         cuisineChosen: false,
         cuisineName: "",
-        restaurants: [],
-        score: 0
+        restaurants: []
     }
 
     componentDidMount() {
@@ -19,11 +18,11 @@ export default class Bronx extends Component {
     }
 
     getCuisines = (data) => {
-        let bronxrest = data.filter(restaurant => restaurant.borough === "Bronx")
-        let cuisines = bronxrest.map(rest => {return rest.cuisine})
+        let brooklynrest = data.filter(restaurant => restaurant.borough === "Brooklyn")
+        let cuisines = brooklynrest.map(rest => {return rest.cuisine})
                
         this.setState({
-            restaurants: bronxrest
+            restaurants: brooklynrest
         })
 
         cuisines.unique = function() {
@@ -47,14 +46,11 @@ export default class Bronx extends Component {
         return this.state.restaurants.filter(rest => rest.cuisine === this.state.cuisineName)
     }
 
-    
-    
+
     render() {
 
-        let cuisineArray =  ["Chinese", "Mexican", "Ice Cream, Gelato, Yogurt, Ices", "Other", "American", "Italian", "Japanese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Chicken", "Caribbean", "Hamburgers", "Spanish", "Pizza", "Delicatessen", "Juice, Smoothies, Fruit Salads", "Bakery"].sort()
+        let cuisineArray = ["Caribbean", "American", "Chinese", "Japanese", "Bagels/Pretzels", "Mexican", "Seafood", "Jewish/Kosher", "Pakistani", "Café/Coffee/Tea", "Italian", "Tapas", "Pizza", "Juice, Smoothies, Fruit Salads", "Salads", "Other", "Delicatessen", "Eastern European", "Spanish", "Thai", "Asian", "Russian", "Polish", "Sandwiches/Salads/Mixed Buffet", "Pizza/Italian", "Turkish", "Donuts", "Chicken", "Bakery"]
 
-       
-        
         return (
             <div className="bronx">
                
@@ -63,7 +59,7 @@ export default class Bronx extends Component {
                  {this.state.cuisineChosen ?
                      <div className="center"> 
                         <h2>Great Choice!</h2>
-                       <h2>You chose {this.state.cuisineName}. </h2> 
+                       <h2>You chose {this.state.cuisineName} food. </h2> 
                             <h2>Here are your options:</h2>
                                 {this.renderRestaurants().map(restaurant => {return <div className="restaurants"><NavLink to={`/restaurant/${restaurant.id}`} className="navlink-restaurant" id={restaurant.name}> {restaurant.name}</NavLink></div>})}
                                 <h1> <span role="img">😈</span></h1>
@@ -71,15 +67,15 @@ export default class Bronx extends Component {
                      : 
                 <div> 
                      <h2>
-                        Welcome to The Bronx! 
-                        <br></br>This is the first stop on your restaurant journey.
+                        Welcome to Brooklyn! 
+                        <br></br>This is the fourth stop on your restaurant journey.
                     </h2>
-                    <img src={FordhamRoad} alt="fordham-road"></img>
+                    <img src={brooklyn} alt="manhattan"></img>
                     <br></br>
                     <h3>
-                    Home to many different cultures and cuisines, The Bronx has been a hub of variety for decades.
+                    Known for its rich history and beautiful architecture, Brooklyn is quickly becoming the new Manhattan.
                     </h3>
-                    <h3>What kind of food would you like to try?</h3>
+                    <h3>Choose a cuisine!</h3>
                     <select onChange={this.handleSelectCuisine} className="options">
                     {cuisineArray.map(cuisine => <option value={cuisine}>{cuisine}</option>)}
                     </select>

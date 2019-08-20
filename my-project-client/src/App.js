@@ -6,6 +6,10 @@ import LoginPage from  '../src/container/LoginPage';
 import Home from "../src/container/Home"
 import NavBar from "./container/NavBar";
 import Bronx from "./components/Bronx"
+import Queens from "./components/Queens"
+import Manhattan from "./components/Manhattan"
+import Brooklyn from "./components/Brooklyn"
+import Staten_Island from "./components/Staten_Island"
 import Scoreboard from "./components/Scoreboard"
 import Profile from "./components/Profile"
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -26,7 +30,11 @@ function App() {
             <Route path="/profile" component={Profile}></Route>
             <Route path="/leaderboard" component={Scoreboard}></Route>
             <Route path="/login" component={LoginPage}></Route>
-            <Route path="/restaurant" component={Restaurant}></Route>
+            <Route path="/restaurant/:id" component={Restaurant}></Route>
+            <Route path="/queens" component={Queens}></Route>
+            <Route path="/manhattan" component={Manhattan}></Route>
+            <Route path="/brooklyn" component={Brooklyn}></Route>
+            <Route path="/staten-island" component={Staten_Island}></Route>
       </header>
     </div>
     </Router>

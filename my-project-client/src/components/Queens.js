@@ -1,15 +1,14 @@
 import React, {Component} from "react"
-import FordhamRoad from "./fordham-road.jpg"
 import { NavLink } from 'react-router-dom';
 import Restaurant from "../components/Restaurant"
+import queens from "./queens.jpg"
 
-export default class Bronx extends Component {
+export default class Queens extends Component {
 
     state = {
         cuisineChosen: false,
         cuisineName: "",
-        restaurants: [],
-        score: 0
+        restaurants: []
     }
 
     componentDidMount() {
@@ -19,11 +18,11 @@ export default class Bronx extends Component {
     }
 
     getCuisines = (data) => {
-        let bronxrest = data.filter(restaurant => restaurant.borough === "Bronx")
-        let cuisines = bronxrest.map(rest => {return rest.cuisine})
+        let queensrest = data.filter(restaurant => restaurant.borough === "Queens")
+        let cuisines = queensrest.map(rest => {return rest.cuisine})
                
         this.setState({
-            restaurants: bronxrest
+            restaurants: queensrest
         })
 
         cuisines.unique = function() {
@@ -48,12 +47,10 @@ export default class Bronx extends Component {
     }
 
     
-    
+
     render() {
 
-        let cuisineArray =  ["Chinese", "Mexican", "Ice Cream, Gelato, Yogurt, Ices", "Other", "American", "Italian", "Japanese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Chicken", "Caribbean", "Hamburgers", "Spanish", "Pizza", "Delicatessen", "Juice, Smoothies, Fruit Salads", "Bakery"].sort()
-
-       
+        let cuisineArray =  ["American", "Chinese", "Chinese/Cuban", "Peruvian", "Café/Coffee/Tea", "Vietnamese/Cambodian/Malaysia", "Soul Food", "Spanish", "Delicatessen", "Japanese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Donuts", "Jewish/Kosher", "Caribbean", "Asian", "Indian", "Bangladeshi", "Mediterranean", "Chicken", "Continental", "Bakery", "Thai", "Pizza", "Sandwiches", "Sandwiches/Salads/Mixed Buffet", "Chilean", "Chinese/Japanese"]
         
         return (
             <div className="bronx">
@@ -63,7 +60,7 @@ export default class Bronx extends Component {
                  {this.state.cuisineChosen ?
                      <div className="center"> 
                         <h2>Great Choice!</h2>
-                       <h2>You chose {this.state.cuisineName}. </h2> 
+                       <h2>You chose {this.state.cuisineName} food. </h2> 
                             <h2>Here are your options:</h2>
                                 {this.renderRestaurants().map(restaurant => {return <div className="restaurants"><NavLink to={`/restaurant/${restaurant.id}`} className="navlink-restaurant" id={restaurant.name}> {restaurant.name}</NavLink></div>})}
                                 <h1> <span role="img">😈</span></h1>
@@ -71,13 +68,13 @@ export default class Bronx extends Component {
                      : 
                 <div> 
                      <h2>
-                        Welcome to The Bronx! 
-                        <br></br>This is the first stop on your restaurant journey.
+                        Welcome to Queens! 
+                        <br></br>This is the second stop on your restaurant journey.
                     </h2>
-                    <img src={FordhamRoad} alt="fordham-road"></img>
+                    <img src={queens} alt="queens"></img>
                     <br></br>
                     <h3>
-                    Home to many different cultures and cuisines, The Bronx has been a hub of variety for decades.
+                    The most diverse borough in NYC, Queens is home to so many different kinds of food!
                     </h3>
                     <h3>What kind of food would you like to try?</h3>
                     <select onChange={this.handleSelectCuisine} className="options">
