@@ -49,7 +49,7 @@ export default class Manhattan extends Component {
 
     render() {
 
-        let cuisineArray = ["American", "Japanese", "Vegetarian", "Chinese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Irish", "Italian", "Café/Coffee/Tea", "African", "Not Listed/Not Applicable", "Asian", "Mediterranean", "Hamburgers", "Pizza/Italian", "Other", "Juice, Smoothies, Fruit Salads", "Delicatessen", "Pizza", "Mexican", "Chicken", "Bakery", "Soups & Sandwiches", "Korean", "Sandwiches", "Seafood", "Bottled beverages, including water, sodas, juices, etc.", "Creole", "Jewish/Kosher", "Caribbean", "Ice Cream, Gelato, Yogurt, Ices", "Turkish"]
+        let cuisineArray = ["American", "Japanese", "Vegetarian", "Chinese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Irish", "Italian", "Café/Coffee/Tea", "African", "Asian", "Mediterranean", "Hamburgers", "Pizza/Italian", "Juice, Smoothies, Fruit Salads", "Delicatessen", "Pizza", "Mexican", "Chicken", "Bakery", "Soups & Sandwiches", "Korean", "Sandwiches", "Seafood", "Bottled beverages, including water, sodas, juices, etc.", "Creole", "Jewish/Kosher", "Caribbean", "Ice Cream, Gelato, Yogurt, Ices", "Turkish"]
 
         return (
             <div className="bronx">
