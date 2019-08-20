@@ -45,7 +45,7 @@ class Restaurant extends Component {
          } else if (this.state.borough === "Manhattan") {
             return <NavLink to="/brooklyn" score={this.state.restaurant.score} className="next-borough"> Next Borough </NavLink>
         } else if (this.state.borough === "Brooklyn") {
-            return <NavLink to="/staten-island" score={this.state.restaurant.score} className="next-borough"> Next Borough </NavLink>
+            return <NavLink to="/statenisland" score={this.state.restaurant.score} className="next-borough"> Next Borough </NavLink>
         }
     }
 

@@ -11,7 +11,6 @@ export default class Codes extends Component {
     renderCodes = (data) => {
         let codes = data.map(data => {return data.code})
 
-        console.log(codes)
 
         codes.unique = function() {
             return this.filter(function (value, index, self) { 
@@ -19,7 +18,6 @@ export default class Codes extends Component {
             });
           }
 
-          console.log(codes.unique())
     }
 
     renderOutcomes = () => {
