@@ -61,7 +61,7 @@ export default class Staten_Island extends Component {
                         <h2>Great Choice!</h2>
                        <h2>You chose {this.state.cuisineName} food. </h2> 
                             <h2>Here are your options:</h2>
-                                {this.renderRestaurants().map(restaurant => {return <div className="restaurants"><NavLink to={`/restaurant/${restaurant.id}`} className="navlink-restaurant" id={restaurant.name}> {restaurant.name}</NavLink></div>})}
+                                {this.renderRestaurants().map(restaurant => {return <div className="restaurants"><NavLink to={`/restaurant/${restaurant.id}`} score={restaurant.score} className="navlink-restaurant" id={restaurant.name}> {restaurant.name}</NavLink></div>})}
                                 <h1> <span role="img">😈</span></h1>
                      </div>
                      : 

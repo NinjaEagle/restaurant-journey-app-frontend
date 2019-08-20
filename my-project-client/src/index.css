@@ -12,6 +12,14 @@ body {
   
 }
 
+.next-borough {
+  border-style: solid;
+  text-decoration: none;
+  background-color: darkslateblue;
+  color: white;
+  padding: 4px;
+}
+
 img {
   height: 500px;
   width: 800px;

@@ -26,13 +26,13 @@ class Restaurant extends Component {
             this.setState({
                 restaurant: data,
                 borough: data.borough, 
-                score: this.state.restaurant.score 
+                score: this.state.data.score 
             })
         } else {
             this.setState({
                 restaurant: data,
                 borough: data.borough, 
-                score: this.props.score + this.state.restaurant.score 
+                score: this.props.score + data.score 
             })
         }
     }
