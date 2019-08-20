@@ -6,7 +6,8 @@ export default class Last extends Component {
     state = {
         username: "",
         favoriteFood: "",
-        userAdded: false
+        userAdded: false,
+        score: 0
     }
 
     handleChange = (e) => {
@@ -40,7 +41,7 @@ export default class Last extends Component {
                 score: Math.floor(Math.random() * 100) + 1
             })
         }).then(response => response.json())
-        .then(data => this.setState({userAdded: true}))
+        .then(data => this.setState({userAdded: true, score: data.score}))
     }
 
     addUser = () => {
@@ -51,13 +52,30 @@ export default class Last extends Component {
         }
     }
 
+    showOutcome = () => {
+        if (this.state.score > 75) {
+           return <div>
+                <h1>Sorry, but you have passed away. 😔</h1>
+                <h3>Enter a username to be immortalized on our leaderboard.</h3>
+                </div>
+        } else if (this.state.score > 75 && this.state.score > 60) {
+            return <div>
+                <h1>Wow, you almost didn't make it!</h1>
+                <h3>You don't look well, but enter a username so we can all remember this miracle.</h3>
+                </div>
+        } else {
+            return <div> <h1>You made it just fine! Have you played this game before?</h1>
+                    <h3>Enter a username to be added to the leaderboard:</h3>
+                    </div>
+        }
+        
+    }
+
     render() {
         return (
             <div className="bronx">
                 <br></br>
-                <h1>You made it!</h1>
-                <div>
-                <h3>Enter a username to be added to the leaderboard:</h3>
+               {this.showOutcome()}
                 <form onChange={this.handleChange}>
                     <input value={this.state.username} className="username" type="text"></input>
                     <br></br>
@@ -69,8 +87,6 @@ export default class Last extends Component {
                 </form>
                 {this.addUser()}
                 </div>
-
-            </div>
         )
     }
 }

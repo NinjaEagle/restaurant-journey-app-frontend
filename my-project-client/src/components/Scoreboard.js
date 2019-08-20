@@ -15,10 +15,20 @@ class Score extends Component {
     renderUsers = () =>{
         let sorted = this.state.users.sort((a,b) => (a["score"] < b["score"])? 1:-1)
         return sorted.map(user => {
+
+          const score = () => {
+            if (user.score > 75) {
+              return user.score + " (DECEASED)"
+            }
+            else {
+              return user.score
+            }
+          }
+          
         return (
           <div className="userdiv">
             <span className="user">
-              {user.username}: {user.score}
+              {user.username}: {score()}
             </span>
           </div>
         );});
