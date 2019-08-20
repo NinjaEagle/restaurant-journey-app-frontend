@@ -64,9 +64,9 @@ class Restaurant extends Component {
                     <Codes restaurant={this.state.restaurant}/>
 
                     <div>
-                        <h2>
+                        {/* <h2>
                             Total Score: {this.state.score}
-                        </h2>
+                        </h2> */}
                     {this.findNextBorough()}
                     </div>
             </div>

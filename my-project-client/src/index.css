@@ -17,7 +17,9 @@ body {
   text-decoration: none;
   background-color: darkslateblue;
   color: white;
-  padding: 4px;
+  padding: 5px;
+  margin-top: 30px;
+ 
 }
 
 img {
@@ -112,6 +114,8 @@ code {
   border-style: dashed;
   background-color: darkslateblue;
   color: white;
+  margin-bottom: 50px;
+  padding: 3px;
 }
 
 .restaurant {
