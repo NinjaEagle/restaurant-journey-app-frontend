@@ -33,7 +33,7 @@ function App() {
             <Route path="/queens" component={Queens}></Route>
             <Route path="/manhattan" component={Manhattan}></Route>
             <Route path="/brooklyn" component={Brooklyn}></Route>
-            <Route path="/staten-island" component={Staten_Island}></Route>
+            <Route path="/statenisland" component={Staten_Island}></Route>
       </header>
     </div>
     </Router>
