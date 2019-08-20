@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 class Restaurant extends Component {
 
     state={
-        restaurant: [],
+        restaurant: {},
         borough: "",
         score: 0
     }
@@ -20,19 +20,20 @@ class Restaurant extends Component {
     }
 
     showData = (data) => {
+        console.log(data)
+        const newScore = this.state.score + data.score 
 
         if (data.borough === "Bronx") {
-            
             this.setState({
                 restaurant: data,
                 borough: data.borough, 
-                score: this.state.data.score 
+                score: data.score
             })
         } else {
             this.setState({
                 restaurant: data,
                 borough: data.borough, 
-                score: this.props.score + data.score 
+                score: data.score
             })
         }
     }
@@ -46,11 +47,13 @@ class Restaurant extends Component {
             return <NavLink to="/brooklyn" score={this.state.restaurant.score} className="next-borough"> Next Borough </NavLink>
         } else if (this.state.borough === "Brooklyn") {
             return <NavLink to="/statenisland" score={this.state.restaurant.score} className="next-borough"> Next Borough </NavLink>
+        } else {
+            return <NavLink to="/last" className="next-borough">Next</NavLink>
         }
     }
 
     render() {
-        console.log(this.props)
+        console.log(this.props.id)
         return (
             <div className="restaurant">
                 <div className="restaurant-page"><h1>
@@ -62,7 +65,7 @@ class Restaurant extends Component {
 
                     <div>
                         <h2>
-                            Total Score: {this.state.restaurant.score}
+                            Total Score: {this.state.score}
                         </h2>
                     {this.findNextBorough()}
                     </div>
