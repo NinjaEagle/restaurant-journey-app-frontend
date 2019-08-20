@@ -10,6 +10,7 @@ import Queens from "./components/Queens"
 import Manhattan from "./components/Manhattan"
 import Brooklyn from "./components/Brooklyn"
 import Staten_Island from "./components/Staten_Island"
+import Last from "./components/Last"
 import Scoreboard from "./components/Scoreboard"
 import Profile from "./components/Profile"
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
@@ -35,6 +36,7 @@ function App() {
             <Route path="/manhattan" component={Manhattan}></Route>
             <Route path="/brooklyn" component={Brooklyn}></Route>
             <Route path="/statenisland" component={Staten_Island}></Route>
+            <Route path="/last" component={Last}></Route>
       </header>
     </div>
     </Router>

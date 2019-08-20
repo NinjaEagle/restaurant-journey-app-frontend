@@ -13,9 +13,12 @@ export default class Home extends Component {
                     Try not to get sick!
                 </div>
                 </div>
+                <br></br>
                 Your goal is to make it through all five boroughs without depleting your health.
                 <br></br>
+                <br></br>
                 Choose each restaurant wisely!
+                <br></br>
                 <br></br>
                 <br></br>
                 <NavLink to="/bronx" className="start-button"> Start </NavLink>
