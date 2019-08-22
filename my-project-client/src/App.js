@@ -13,6 +13,7 @@ import Staten_Island from "./components/Staten_Island"
 import Last from "./components/Last"
 import Scoreboard from "./components/Scoreboard"
 import Profile from "./components/Profile"
+import Delete from "./components/Delete"
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Restaurant from './components/Restaurant';
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="/brooklyn" component={Brooklyn}></Route>
             <Route path="/statenisland" component={Staten_Island}></Route>
             <Route path="/last" component={Last}></Route>
+            <Route path="/delete" component={Delete}></Route>
       </header>
     </div>
     </Router>

@@ -24,7 +24,7 @@ export default class NavBar extends Component {
                 
                         <NavLink to="/leaderboard" style={link}>Leaderboard</NavLink>
                     
-                        <NavLink to="/profile" style={link}>Profile</NavLink>
+                        <NavLink to="/profile" style={link}>Players</NavLink>
                  </div>
             </div>
         )
