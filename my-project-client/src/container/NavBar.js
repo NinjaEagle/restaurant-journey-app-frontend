@@ -16,17 +16,25 @@ export default class NavBar extends Component {
           }
 
         return (
-            <div className="navbar">
-                <div className="buttons">
-                        
-                    <span className="title">Restaurant Journey</span>
-                        <NavLink to="/" style={link}>Home</NavLink>
-                
-                        <NavLink to="/leaderboard" style={link}>Leaderboard</NavLink>
-                    
-                        <NavLink to="/profile" style={link}>Profile</NavLink>
-                 </div>
+          <div className="navbar">
+            <div className="buttons">
+              <span className="title">Restaurant Journey</span>
+              <NavLink to="/login" style={link}>
+                Login
+              </NavLink>
+              <NavLink to="/" style={link}>
+                Home
+              </NavLink>
+
+              <NavLink to="/leaderboard" style={link}>
+                Leaderboard
+              </NavLink>
+
+              <NavLink to="/profile" style={link}>
+                Profile
+              </NavLink>
             </div>
-        )
+          </div>
+        );
     }
 }

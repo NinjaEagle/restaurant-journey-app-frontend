@@ -7,6 +7,7 @@ class LoginPage extends Component {
         username: '',
         password: ''
     }
+    
     handleLogin = (event) => {
        this.setState({
            [event.target.name]:event.target.value
@@ -22,36 +23,39 @@ class LoginPage extends Component {
         });
     }
 
-    // handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     fetch("http://localhost:3000/auth",{
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             "Accepts": "application/json"
-    //         },
-    //         body: JSON.stringify({
-    //             username: this.state.username,
-    //             password: this.state.password
-    //         })
-    //     })
-    //     }
-    // }
+    handleSubmit = (e) => {
+      console.log("I'm submitting")
+        e.preventDefault();
+        fetch("http://localhost:3000/login",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accepts": "application/json"
+            },
+            body: JSON.stringify(this.state)
+        })
+        .then(res => res.json())
+        .then(data =>{ console.log(data)
+        if (data.token)  {
+          localStorage.token = data.token
+          this.props.redirect('profile')
+        }})
+        }
     
 
     render() {
         // console.log(this.state.username)
         return (
-
           <div>
             <h1 class="title">NYC Restaurant Journey</h1>
-            <form onChange={this.handleLogin}>
+            <form>
               <br />
               Username:
               <input
                 name="username"
                 type="text"
                 value={this.state.username}
+                onChange={this.handleLogin}
               />
               <br />
               Password:
@@ -59,9 +63,14 @@ class LoginPage extends Component {
                 name="password"
                 type="text"
                 value={this.state.password}
+                onChange={this.handleLogin}
               />
               <br />
-              <button onClick={this.handleSubmit} name="submit" type="submit">
+              <button
+                onClick={this.handleSubmit}
+                name="submit"
+                type="submit"
+              >
                 Log In
               </button>
             </form>
