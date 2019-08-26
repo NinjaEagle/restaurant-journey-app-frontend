@@ -34,7 +34,6 @@ class Score extends Component {
           </div>
         );});
     }
-    
 
 
     render() {

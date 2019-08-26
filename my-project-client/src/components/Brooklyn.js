@@ -49,14 +49,11 @@ export default class Brooklyn extends Component {
 
     render() {
 
-        let cuisineArray = ["Caribbean", "American", "Chinese", "Japanese", "Bagels/Pretzels", "Mexican", "Seafood", "Jewish/Kosher", "Pakistani", "Café/Coffee/Tea", "Italian", "Tapas", "Pizza", "Juice, Smoothies, Fruit Salads", "Salads", "Delicatessen", "Eastern European", "Spanish", "Thai", "Asian", "Russian", "Polish", "Sandwiches/Salads/Mixed Buffet", "Pizza/Italian", "Turkish", "Donuts", "Chicken", "Bakery"]
+        let cuisineArray = ["Caribbean", "American", "Chinese", "Japanese", "Mexican", "Jewish/Kosher", "Café/Coffee/Tea", "Italian", "Tapas", "Pizza", "Delicatessen", "Spanish", "Asian", "Pizza/Italian", "Chicken", "Bakery"]
 
         return (
             <div className="bronx">
-               
-               
-
-                 {this.state.cuisineChosen ?
+               {this.state.cuisineChosen ?
                      <div className="center"> 
                         <h2>Great Choice!</h2>
                        <h2>You chose {this.state.cuisineName}. </h2> 
@@ -82,7 +79,6 @@ export default class Brooklyn extends Component {
                     </select>
                 </div>
                      } 
-                
 
             </div>
         )

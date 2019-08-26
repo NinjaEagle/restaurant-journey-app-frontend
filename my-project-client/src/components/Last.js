@@ -11,7 +11,6 @@ export default class Last extends Component {
     }
 
     handleChange = (e) => {
-        console.log(e.target.value)
 
         if (e.target.className === "username") {
 
@@ -29,8 +28,8 @@ export default class Last extends Component {
         e.preventDefault()
         console.log(e.target)
 
-        fetch("http://localhost:3000/users", {
-            method: "POST",
+        fetch("http://localhost:3000/profile", {
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
                 "Accepts": "application/json"
@@ -75,10 +74,9 @@ export default class Last extends Component {
         return (
             <div className="bronx">
                 <br></br>
-               {this.showOutcome()}
+                {this.showOutcome()}
                 <form onChange={this.handleChange}>
-                    <input value={this.state.username} className="username" type="text"></input>
-                    <br></br>
+                    
                     <h3>What's your favorite food?</h3>
                     <input value={this.state.favorite_food} className="favorite_food" type="text"></input>
                     <br></br>
@@ -86,7 +84,9 @@ export default class Last extends Component {
                     <button onClick={this.handleSubmit} className="next-borough"> Submit</button>
                 </form>
                 {this.addUser()}
-                </div>
+            </div>
         )
     }
 }
+//   <input value={this.state.username} className="username" type="text"></input>
+                    // <br></br>

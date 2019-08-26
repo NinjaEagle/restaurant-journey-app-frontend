@@ -27,6 +27,7 @@ export default class NavBar extends Component {
                         <NavLink to="/profile" style={link}>Players</NavLink>
                  </div>
             </div>
-        )
+          </div>
+        );
     }
 }

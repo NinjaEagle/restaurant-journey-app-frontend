@@ -49,14 +49,11 @@ export default class Manhattan extends Component {
 
     render() {
 
-        let cuisineArray = ["American", "Japanese", "Vegetarian", "Chinese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Irish", "Italian", "Café/Coffee/Tea", "African", "Asian", "Mediterranean", "Hamburgers", "Pizza/Italian", "Juice, Smoothies, Fruit Salads", "Delicatessen", "Pizza", "Mexican", "Chicken", "Bakery", "Soups & Sandwiches", "Korean", "Sandwiches", "Seafood", "Bottled beverages, including water, sodas, juices, etc.", "Creole", "Jewish/Kosher", "Caribbean", "Ice Cream, Gelato, Yogurt, Ices", "Turkish"]
+        let cuisineArray = ["American", "Japanese", "Chinese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Irish", "Italian", "Café/Coffee/Tea", "Hamburgers", "Delicatessen", "Pizza", "Mexican", "Chicken", "Bakery", "Korean", "Seafood", "Jewish/Kosher"]
 
         return (
             <div className="bronx">
-               
-               
-
-                 {this.state.cuisineChosen ?
+              {this.state.cuisineChosen ?
                      <div className="center"> 
                         <h2>Great Choice!</h2>
                        <h2>You chose {this.state.cuisineName}. </h2> 

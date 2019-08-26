@@ -50,14 +50,11 @@ export default class Queens extends Component {
 
     render() {
 
-        let cuisineArray =  ["American", "Chinese", "Chinese/Cuban", "Peruvian", "Café/Coffee/Tea", "Vietnamese/Cambodian/Malaysia", "Soul Food", "Spanish", "Delicatessen", "Japanese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Donuts", "Jewish/Kosher", "Caribbean", "Asian", "Indian", "Bangladeshi", "Mediterranean", "Chicken", "Continental", "Bakery", "Thai", "Pizza", "Sandwiches", "Sandwiches/Salads/Mixed Buffet", "Chilean", "Chinese/Japanese"]
+        let cuisineArray =  ["American", "Chinese", "Café/Coffee/Tea", "Spanish", "Delicatessen", "Japanese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Caribbean", "Indian", "Bangladeshi", "Mediterranean", "Continental", "Bakery", "Pizza"]
         
         return (
             <div className="bronx">
-               
-               
-
-                 {this.state.cuisineChosen ?
+              {this.state.cuisineChosen ?
                      <div className="center"> 
                         <h2>Great Choice!</h2>
                        <h2>You chose {this.state.cuisineName}. </h2> 

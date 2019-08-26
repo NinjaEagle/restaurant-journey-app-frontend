@@ -51,15 +51,12 @@ export default class Bronx extends Component {
     
     render() {
 
-        let cuisineArray =  ["Chinese", "Mexican", "Ice Cream, Gelato, Yogurt, Ices", "American", "Italian", "Japanese", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Chicken", "Caribbean", "Hamburgers", "Spanish", "Pizza", "Delicatessen", "Juice, Smoothies, Fruit Salads", "Bakery"].sort()
+        let cuisineArray =  ["Chinese", "Mexican", "American", "Latin (Cuban, Dominican, Puerto Rican, South & Central American)", "Chicken", "Caribbean", "Spanish", "Pizza", "Delicatessen", "Juice, Smoothies, Fruit Salads", "Bakery"].sort()
 
        
         
         return (
             <div className="bronx">
-               
-               
-
                  {this.state.cuisineChosen ?
                      <div className="center"> 
                         <h2>Great Choice!</h2>

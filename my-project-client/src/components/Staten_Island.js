@@ -50,12 +50,10 @@ export default class Staten_Island extends Component {
 
     render() {
 
-        let cuisineArray = ["Ice Cream, Gelato, Yogurt, Ices", "Pizza/Italian", "Italian", "Chinese", "American", "Indian", "Hamburgers"]
+        let cuisineArray = ["Pizza/Italian", "Italian", "Chinese", "American"]
         
         return (
             <div className="bronx">
-               
-
                  {this.state.cuisineChosen ?
                      <div className="center"> 
                         <h2>Great Choice!</h2>
@@ -91,9 +89,5 @@ export default class Staten_Island extends Component {
 
 
     } //render
-
-
-
-
     // top level
 }
