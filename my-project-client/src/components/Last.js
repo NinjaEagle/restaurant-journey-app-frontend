@@ -7,7 +7,7 @@ export default class Last extends Component {
         username: "",
         favoriteFood: "",
         userAdded: false,
-        score: 0
+        score: Math.floor(Math.random() * 200) + 20
     }
 
     handleChange = (e) => {
@@ -37,7 +37,7 @@ export default class Last extends Component {
             body: JSON.stringify({
                 username: this.state.username,
                 favorite_food: this.state.favoriteFood,
-                score: Math.floor(Math.random() * 100) + 1
+                score: this.state.score 
             })
         }).then(response => response.json())
         .then(data => this.setState({userAdded: true, score: data.score}))
@@ -45,25 +45,25 @@ export default class Last extends Component {
 
     addUser = () => {
         if (this.state.userAdded === true) {
-            return <div><h3>You've been added to the leaderboard!</h3> <NavLink to="/leaderboard" classname="next-borough">Click to see the leaderboard</NavLink> </div>
+            return <div> <br></br> <h3>You've been added to the leaderboard!</h3> <NavLink to="/leaderboard" className="next-borough">Click to see the leaderboard</NavLink> </div>
         } else {
             return null 
         }
     }
 
     showOutcome = () => {
-        if (this.state.score > 75) {
+        if (this.state.score >= 80) {
            return <div>
                 <h1>Sorry, but you have passed away. 😔</h1>
                 <h3>Enter a username to be immortalized on our leaderboard.</h3>
                 </div>
-        } else if (this.state.score > 75 && this.state.score > 60) {
+        } else if (this.state.score <= 79 && this.state.score >= 50) {
             return <div>
-                <h1>Wow, you almost didn't make it!</h1>
+                <h1>Wow, you almost didn't make it! 😳</h1>
                 <h3>You don't look well, but enter a username so we can all remember this miracle.</h3>
                 </div>
-        } else {
-            return <div> <h1>You made it just fine! Have you played this game before?</h1>
+        } else if (this.state.score > 0 && this.state.score <= 49) {
+            return <div> <h1>You made it just fine! 😜 Have you played this game before?</h1>
                     <h3>Enter a username to be added to the leaderboard:</h3>
                     </div>
         }
