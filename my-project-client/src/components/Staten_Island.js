@@ -53,61 +53,41 @@ export default class Staten_Island extends Component {
         let cuisineArray = ["Pizza/Italian", "Italian", "Chinese", "American"]
         
         return (
-          <div className="bronx">
-            {this.state.cuisineChosen ? (
-              <div className="center">
-                <h2>Great Choice!</h2>
-                <h2>You chose {this.state.cuisineName}</h2>
-                <h2>Here are your options:</h2>
-                {this.renderRestaurants().map(restaurant => {
-                  return (
-                    <div className="restaurants">
-                      <NavLink
-                        to={`/restaurant/${restaurant.id}`}
-                        className="navlink-restaurant"
-                        id={restaurant.score}
-                      >
-                        {" "}
-                        {restaurant.name}
-                      </NavLink>
-                    </div>
-                  );
-                })}
-                <h1>
-                  {" "}
-                  <span role="img">😈</span>
-                </h1>
-              </div>
-            ) : (
-              <div>
-                <h2>
-                  Welcome to Staten Island!{" "}
-                  <h4>Did you forget it was a borough?</h4>
-                  This is the last stop on your restaurant journey!
-                </h2>
-                <img src={statenisland} alt="staten-island" />
-                <br />
-                <h3>Staten Island is...a place.</h3>
-                <h3>What kind of food would you like to try?</h3>
-                <select
-                  onChange={this.handleSelectCuisine}
-                  className="options"
-                >
-                  <option value="none">Select an option</option>
-                  {cuisineArray.map(cuisine => (
-                    <option value={cuisine}>{cuisine}</option>
-                  ))}
-                </select>
-              </div>
-            )}
-          </div>
-        ); //return
+            <div className="bronx">
+                 {this.state.cuisineChosen ?
+                     <div className="center"> 
+                        <h2>Great Choice!</h2>
+                       <h2>You chose {this.state.cuisineName}. </h2> 
+                            <h2>Here are your options:</h2>
+                                {this.renderRestaurants().map(restaurant => {return <div className="restaurants"><NavLink to={`/restaurant/${restaurant.id}`} className="navlink-restaurant" id={restaurant.score}> {restaurant.name}</NavLink></div>})}
+                                <h1> <span role="img">😈</span></h1>
+                     </div>
+                     : 
+                    <div> 
+                     <h2>
+                        Welcome to Staten Island! <h4>Did you forget it was a borough?</h4>
+                        This is the last stop on your restaurant journey!
+                    </h2>
+                    <img src={statenisland} alt="staten-island"></img>
+                    <br></br>
+                    <h3>
+                    Staten Island is...a place.
+                    </h3>
+                    <h3>What kind of food would you like to try?</h3>
+                    <select onChange={this.handleSelectCuisine} className="options">
+                    <option value="none">Select an option</option> 
+                    {cuisineArray.map(cuisine => <option value={cuisine}>{cuisine}</option>)}
+                    </select>
+                </div>
+                     } 
+                
+
+            </div>
+
+            
+        ) //return
 
 
     } //render
-
-
-
-
     // top level
 }
