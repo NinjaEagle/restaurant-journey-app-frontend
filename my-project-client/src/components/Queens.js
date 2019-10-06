@@ -57,7 +57,7 @@ export default class Queens extends Component {
             {this.state.cuisineChosen ? (
               <div className="center">
                 <h2>Great Choice!</h2>
-                <h2>You chose {this.state.cuisineName} food. </h2>
+                <h2>You chose {this.state.cuisineName} </h2>
                 <h2>Here are your options:</h2>
                 {this.renderRestaurants().map(restaurant => {
                   return (

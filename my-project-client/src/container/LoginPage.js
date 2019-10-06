@@ -38,7 +38,7 @@ class LoginPage extends Component {
         .then(data =>{ console.log(data)
         if (data.token)  {
           localStorage.token = data.token
-          this.props.redirect('profile')
+          this.props.history.push('./profile')
         }})
         }
     
@@ -47,7 +47,7 @@ class LoginPage extends Component {
         // console.log(this.state.username)
         return (
           <div>
-            <h1 class="title">NYC Restaurant Journey</h1>
+      
             <form>
               <br />
               Username:

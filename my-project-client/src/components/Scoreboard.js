@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from "react-router-dom";
 
 class Score extends Component {
     state = {
@@ -17,7 +18,7 @@ class Score extends Component {
         return sorted.map(user => {
 
           const score = () => {
-            if (user.score > 75) {
+            if (user.score > 80) {
               return user.score + " (DECEASED)"
             }
             else {
@@ -39,8 +40,11 @@ class Score extends Component {
         return (
           <div className="leaderboard">
             <h1>Leaderboard</h1>
-            <h2>Sickest Players:</h2>
+            <h2>Healthiest Players:</h2>
             {this.renderUsers()}
+            <h3>Ashamed of your score? Want it removed from the leaderboard? <br></br>
+            Click the button below to send a request.</h3>
+          <NavLink to="/delete" className="next-borough">Delete Me From Leaderboard</NavLink>
         
           </div>
         );

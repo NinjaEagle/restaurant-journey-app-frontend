@@ -31,7 +31,7 @@ export default class NavBar extends Component {
               </NavLink>
 
               <NavLink to="/profile" style={link}>
-                Profile
+                Players
               </NavLink>
             </div>
           </div>
