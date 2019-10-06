@@ -22,6 +22,6 @@ And the video demo of the project: https://youtu.be/jIzeiSOjo-s
 &&
 [Ruby on Rails](https://github.com/rails/rails) - Backend Ruby on Rails API created using ActiveRecord
 
-### Authors
+## Authors
 [Kevin Wang](https://github.com/NinjaEagle)
 & [Franchely Portorreal](https://github.com/Franchely)
