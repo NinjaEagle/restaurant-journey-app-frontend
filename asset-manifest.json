@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/restaurant-journey-app/static/css/main.68abee3f.chunk.css",
+    "main.js": "/restaurant-journey-app/static/js/main.f304eecc.chunk.js",
+    "main.js.map": "/restaurant-journey-app/static/js/main.f304eecc.chunk.js.map",
+    "runtime-main.js": "/restaurant-journey-app/static/js/runtime-main.511b13fe.js",
+    "runtime-main.js.map": "/restaurant-journey-app/static/js/runtime-main.511b13fe.js.map",
+    "static/js/2.bb72eaf8.chunk.js": "/restaurant-journey-app/static/js/2.bb72eaf8.chunk.js",
+    "static/js/2.bb72eaf8.chunk.js.map": "/restaurant-journey-app/static/js/2.bb72eaf8.chunk.js.map",
+    "index.html": "/restaurant-journey-app/index.html",
+    "precache-manifest.44d0ca0f8f3f22bc497372332aa0cb5f.js": "/restaurant-journey-app/precache-manifest.44d0ca0f8f3f22bc497372332aa0cb5f.js",
+    "service-worker.js": "/restaurant-journey-app/service-worker.js",
+    "static/css/main.68abee3f.chunk.css.map": "/restaurant-journey-app/static/css/main.68abee3f.chunk.css.map",
+    "static/js/2.bb72eaf8.chunk.js.LICENSE": "/restaurant-journey-app/static/js/2.bb72eaf8.chunk.js.LICENSE",
+    "static/media/brooklyn.jpg": "/restaurant-journey-app/static/media/brooklyn.fcf27836.jpg",
+    "static/media/fordham-road.jpg": "/restaurant-journey-app/static/media/fordham-road.b286e9f7.jpg",
+    "static/media/manhattan.jpg": "/restaurant-journey-app/static/media/manhattan.eb976ba6.jpg",
+    "static/media/queens.jpg": "/restaurant-journey-app/static/media/queens.441423d1.jpg",
+    "static/media/statenisland.jpeg": "/restaurant-journey-app/static/media/statenisland.067766d4.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.511b13fe.js",
+    "static/js/2.bb72eaf8.chunk.js",
+    "static/css/main.68abee3f.chunk.css",
+    "static/js/main.f304eecc.chunk.js"
+  ]
+}
