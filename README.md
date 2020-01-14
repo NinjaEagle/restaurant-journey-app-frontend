@@ -11,7 +11,7 @@ And the video demo of the project: https://youtu.be/jIzeiSOjo-s
 ## Setup
 1. Use your terminal to navigate into the place where you want to clone NYC Restroom Finder's directory and `git clone` the url.
 2. In terminal run `bundle install` in order to install the necessary gems needed to run the backend.
-3. In terminal run `npm install` in order to install the necessary packages found in the `package.json` file to run this frontend.
+3. Execute `npm install` in order to install the necessary packages found in the `package.json` file to run this frontend.
 4. Then this command: `yarn add semantic-ui-react`
 5. Run `rails s` on the backend (https://github.com/Franchely/restaurant-journey-app-backend) then run `npm start`
 6. Open [http://localhost:3000](http://localhost:3000) or another port specified to view it in the browser.
@@ -20,7 +20,7 @@ And the video demo of the project: https://youtu.be/jIzeiSOjo-s
 
 [ReactJS](https://github.com/facebook/react) - Frontend Framework
 &&
-[Ruby on Rails](https://github.com/rails/rails) - Backend Ruby on Rails API created using ActiveRecord
+[Ruby on Rails](https://github.com/rails/rails) - Backend Ruby on Rails API created using ActiveRecord deployed on Heroku
 
 ## Authors
 [Kevin Wang](https://github.com/NinjaEagle)
