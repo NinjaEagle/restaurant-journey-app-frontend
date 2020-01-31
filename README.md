@@ -8,6 +8,8 @@ Here's the link to the backend: https://github.com/Franchely/restaurant-journey-
 
 And the video demo of the project: https://youtu.be/jIzeiSOjo-s
 
+Here's the live project for you to play the game. Click on the tab home on the top! https://ninjaeagle.github.io/restaurant-journey-app-frontend/
+
 ## Setup
 1. Use your terminal to navigate into the place where you want to clone NYC Restroom Finder's directory and `git clone` the url.
 2. In terminal run `bundle install` in order to install the necessary gems needed to run the backend.
