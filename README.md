@@ -27,3 +27,7 @@ Live project link: Make sure to click on the tab home on the top and wait for th
 ## Authors
 [Kevin Wang](https://github.com/NinjaEagle)
 & [Franchely Portorreal](https://github.com/Franchely)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
