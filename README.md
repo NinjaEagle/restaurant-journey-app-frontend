@@ -8,7 +8,7 @@ Backend Link: https://github.com/Franchely/restaurant-journey-app-backend which 
 
 Video demo of the project: https://youtu.be/jIzeiSOjo-s
 
-Live project link: Make sure to click on the tab home on the top and wait for the options to load! https://ninjaeagle.github.io/restaurant-journey-app-frontend/
+Live project link: https://ninjaeagle.github.io/restaurant-journey-app-frontend/
 
 ## Setup
 1. Use your terminal to navigate into the place where you want to clone NYC Restroom Finder's directory and `git clone` the url.
