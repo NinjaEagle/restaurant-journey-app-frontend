@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a439e9b596542893623604a9e3f4ae99",
+    "revision": "dcc295d5bac767a0d35683aed3afc3c4",
     "url": "/restaurant-journey-app-frontend/index.html"
   },
   {
-    "revision": "5400d12f65e0f9fd662b",
+    "revision": "0de15039b4a132a6c4b6",
     "url": "/restaurant-journey-app-frontend/static/css/main.68abee3f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/restaurant-journey-app-frontend/static/js/2.1bc33514.chunk.js.LICENSE"
   },
   {
-    "revision": "5400d12f65e0f9fd662b",
-    "url": "/restaurant-journey-app-frontend/static/js/main.30918c5e.chunk.js"
+    "revision": "0de15039b4a132a6c4b6",
+    "url": "/restaurant-journey-app-frontend/static/js/main.337e40d9.chunk.js"
   },
   {
     "revision": "577fde2e91e3c819153a",
