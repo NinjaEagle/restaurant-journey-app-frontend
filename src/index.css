@@ -105,11 +105,8 @@ code {
   margin-bottom: 20px;
   margin-top: 20px;
   text-decoration: none;
-  width: 300px;
   padding-top: 10px;
   line-break: normal
-  
-  
 }
 
 .outcome-div {
@@ -149,6 +146,15 @@ code {
   text-align: center;
 }
 
+
+/* profile */
+
+.profile-cards{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .user{
   border-style: ridge;
   margin-bottom: 20px;
@@ -165,6 +171,6 @@ code {
 .usercard{
   margin-bottom: 10px;
   text-align: center;
-  margin-left: 550px;
   margin-top: 30px;
 }
+

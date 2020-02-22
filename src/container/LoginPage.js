@@ -1,6 +1,5 @@
 import React, { Component } from 'react'; 
 import anime from "animejs/lib/anime.es.js";
-import "../style.scss";
 class LoginPage extends Component {
 
     state ={
@@ -26,7 +25,8 @@ class LoginPage extends Component {
     handleSubmit = (e) => {
       console.log("I'm submitting")
         e.preventDefault();
-        fetch("http://localhost:3000/login",{
+        // fetch("http://localhost:3000/login",{
+        fetch("https://restaurant-journey-backend.herokuapp.com/login",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

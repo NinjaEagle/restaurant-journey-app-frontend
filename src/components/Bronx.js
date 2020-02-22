@@ -13,7 +13,8 @@ export default class Bronx extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3000/restaurants")
+        // fetch("http://localhost:3000/restaurants")
+        fetch("https://restaurant-journey-backend.herokuapp.com/restaurants")
         .then(response => response.json())
         .then(data => this.getCuisines(data))
     }
@@ -44,7 +45,7 @@ export default class Bronx extends Component {
 
     render() {
        let sortedCuisines= this.state.cuisineList.sort();
-        
+        console.log(this.state)
         return (
           <div className="bronx">
             {this.state.cuisineChosen ? (

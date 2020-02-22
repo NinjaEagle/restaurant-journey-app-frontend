@@ -6,7 +6,8 @@ class Score extends Component {
         users:[],
     }
     componentDidMount(){
-        fetch("http://localhost:3000/users")
+        // fetch("http://localhost:3000/users")
+        fetch("https://restaurant-journey-backend.herokuapp.com/users")
         .then(res => res.json())
         .then(data => this.setState({
             users: data

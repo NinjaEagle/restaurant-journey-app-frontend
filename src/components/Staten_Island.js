@@ -13,7 +13,8 @@ export default class Staten_Island extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3000/restaurants")
+        // fetch("http://localhost:3000/restaurants")
+        fetch("https://restaurant-journey-backend.herokuapp.com/restaurants")
         .then(response => response.json())
         .then(data => this.getCuisines(data))
     }

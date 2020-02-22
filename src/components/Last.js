@@ -25,7 +25,8 @@ export default class Last extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         let usersList = this.state.users
-        fetch("http://localhost:3000/users", {
+        // fetch("http://localhost:3000/users", {
+        fetch("https://restaurant-journey-backend.herokuapp.com/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -34,15 +35,14 @@ export default class Last extends Component {
             body: JSON.stringify({
                 username: this.state.username,
                 favorite_food: this.state.favoriteFood,
-                score: this.state.score,
-                password: "123"
+                score: this.state.score
             })
         }).then(response => response.json())
         .then(data => 
             this.setState({userAdded: true,
                 users: [...usersList, data]
             })
-            )
+        )
     }
 
     addUser = () => {
@@ -86,7 +86,7 @@ export default class Last extends Component {
                 ></input>
                 <h3>What's your favorite food?</h3>
                 <input
-                value={this.state.favorite_food}
+                value={this.state.favoriteFood}
                 className="favorite_food"
                 type="text"
                 ></input>

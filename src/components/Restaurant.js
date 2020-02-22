@@ -14,14 +14,15 @@ class Restaurant extends Component {
         let urlArray = document.URL.split("/")
         let id = parseInt(urlArray[urlArray.length - 1])
 
-        fetch(`http://localhost:3000/restaurants/${id}`)
+        // fetch(`http://localhost:3000/restaurants/${id}`)
+        fetch(`https://restaurant-journey-backend.herokuapp.com/restaurants/${id}`)
         .then(response => response.json())
         .then(data => this.showData(data))
     }
 
     showData = (data) => {
         console.log(data)
-        const newScore = this.state.score + data.score 
+        // const newScore = this.state.score + data.score 
 
         if (data.borough === "Bronx") {
             this.setState({

@@ -10,7 +10,8 @@ export default class Delete extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/users")
+    // fetch("http://localhost:3000/users")
+    fetch("https://restaurant-journey-backend.herokuapp.com/users")
       .then(response => response.json())
       .then(data => this.setState({ users: data }));
   }
@@ -40,6 +41,7 @@ export default class Delete extends Component {
     let user = this.state.users.filter(
       user => user["username"] === this.state.username
     );
+    console.log(user);
 
     if (user.length === 0) {
       this.setState({ userNotFound: true });
@@ -52,13 +54,17 @@ export default class Delete extends Component {
     }
   };
 
-  makeFetch = (user) => {
+  makeFetch = user => {
     this.setState({ deleted: true });
 
-    fetch(`http://localhost:3000/users/${user[0].id}`, {
-      method: "DELETE",
-      body: JSON.stringify({ user })
-    })
+    // fetch(`http://localhost:3000/users/${user[0].id}`, {
+    fetch(
+      "https://restaurant-journey-backend.herokuapp.com/users/${user[0].id}",
+      {
+        method: "DELETE",
+        body: JSON.stringify({ user })
+      }
+    )
       .then(response => response.json())
       .then(this.deleted);
   };
@@ -70,6 +76,7 @@ export default class Delete extends Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <div className="bronx">
         <br></br>
@@ -84,7 +91,7 @@ export default class Delete extends Component {
             value={this.state.username}
             type="text"
           ></input>
-          <h3></h3>
+
           <button onClick={this.deleteUser} className="next-borough">
             Delete Me
           </button>
