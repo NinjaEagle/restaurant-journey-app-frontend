@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/restaurant-journey-app-frontend/static/css/main.68abee3f.chunk.css",
-    "main.js": "/restaurant-journey-app-frontend/static/js/main.f1c79b54.chunk.js",
-    "main.js.map": "/restaurant-journey-app-frontend/static/js/main.f1c79b54.chunk.js.map",
+    "main.js": "/restaurant-journey-app-frontend/static/js/main.44bc2d6b.chunk.js",
+    "main.js.map": "/restaurant-journey-app-frontend/static/js/main.44bc2d6b.chunk.js.map",
     "runtime-main.js": "/restaurant-journey-app-frontend/static/js/runtime-main.b1c3ba37.js",
     "runtime-main.js.map": "/restaurant-journey-app-frontend/static/js/runtime-main.b1c3ba37.js.map",
     "static/js/2.1bc33514.chunk.js": "/restaurant-journey-app-frontend/static/js/2.1bc33514.chunk.js",
     "static/js/2.1bc33514.chunk.js.map": "/restaurant-journey-app-frontend/static/js/2.1bc33514.chunk.js.map",
     "index.html": "/restaurant-journey-app-frontend/index.html",
-    "precache-manifest.5c66f8c40d04fb065e4a79e0d297feb3.js": "/restaurant-journey-app-frontend/precache-manifest.5c66f8c40d04fb065e4a79e0d297feb3.js",
+    "precache-manifest.b364bb027f83e7280d3d1dfd7e4c46ec.js": "/restaurant-journey-app-frontend/precache-manifest.b364bb027f83e7280d3d1dfd7e4c46ec.js",
     "service-worker.js": "/restaurant-journey-app-frontend/service-worker.js",
     "static/css/main.68abee3f.chunk.css.map": "/restaurant-journey-app-frontend/static/css/main.68abee3f.chunk.css.map",
     "static/js/2.1bc33514.chunk.js.LICENSE": "/restaurant-journey-app-frontend/static/js/2.1bc33514.chunk.js.LICENSE",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.b1c3ba37.js",
     "static/js/2.1bc33514.chunk.js",
     "static/css/main.68abee3f.chunk.css",
-    "static/js/main.f1c79b54.chunk.js"
+    "static/js/main.44bc2d6b.chunk.js"
   ]
 }
