@@ -23,7 +23,13 @@ export default class Delete extends Component {
   };
 
   deleted = () => {
-    if (this.state.deleted === true) {
+    if (this.state.userNotFound === true) {
+      return (
+        <h2>
+          Sorry, no users with that username were found. Reenter username again!
+        </h2>
+      );
+    } else if (this.state.deleted === true) {
       return (
         <div>
           <h2>You have been deleted from the Leaderboard.</h2>
@@ -35,48 +41,55 @@ export default class Delete extends Component {
     }
   };
 
+  noUser = () => {
+    if (this.state.userNotFound === true) {
+      return (
+        <h2>
+          Sorry, no users with that username were found. Reenter username again!
+        </h2>
+      );
+    }
+  };
+
   deleteUser = e => {
     e.preventDefault();
-
+    this.setState({ userNotFound: false });
     let user = this.state.users.filter(
       user => user["username"] === this.state.username
     );
-    console.log(user);
-
     if (user.length === 0) {
       this.setState({ userNotFound: true });
     } else {
       const sendUser = user => {
         this.makeFetch(user);
       };
-
       sendUser(user);
     }
   };
 
   makeFetch = user => {
-    this.setState({ deleted: true });
-
-    // fetch(`http://localhost:3000/users/${user[0].id}`, {
+    const userId = user[0].id;
     fetch(
-      "https://restaurant-journey-backend.herokuapp.com/users/${user[0].id}",
+      // "https://restaurant-journey-backend.herokuapp.com/users/"+${user[0].id},
+      `https://restaurant-journey-backend.herokuapp.com/users/${userId}`,
       {
         method: "DELETE",
         body: JSON.stringify({ user })
       }
     )
-      .then(response => response.json())
-      .then(this.deleted);
-  };
-
-  noUser = () => {
-    if (this.state.userNotFound === true) {
-      return <h2>Sorry, no users with that username were found.</h2>;
-    }
+      // .then(res => res.json())
+      .then(() => {
+        const updatedUsers = this.state.users.filter(aUser => {
+          return aUser.id !== user.id;
+        });
+        this.setState({ deleted: true, users: updatedUsers });
+      })
+      .catch(err => {
+        console.log("err", err);
+      });
   };
 
   render() {
-    console.log(this.state);
     return (
       <div className="bronx">
         <br></br>
@@ -95,7 +108,6 @@ export default class Delete extends Component {
           <button onClick={this.deleteUser} className="next-borough">
             Delete Me
           </button>
-          {this.noUser()}
         </form>
         {this.deleted()}
       </div>
