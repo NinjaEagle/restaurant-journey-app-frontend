@@ -4,11 +4,9 @@ Restaurant Journey is a click-through game created using NYC OpenData’s Restau
 Results are on the leaderboard in which you can see who was ranked as the healthiest player on the top.
 
 ## Important Links
-Backend Link: https://github.com/Franchely/restaurant-journey-app-backend which contains the seeded data of restaurants.
-
-Video demo of the project: https://youtu.be/jIzeiSOjo-s
-
 Live project link: https://ninjaeagle.github.io/restaurant-journey-app-frontend/
+Backend Link: https://github.com/Franchely/restaurant-journey-app-backend which contains the seeded data of restaurants.
+Video demo of the project: https://youtu.be/jIzeiSOjo-s
 
 ## Setup
 1. Use your terminal to navigate into the place where you want to clone NYC Restroom Finder's directory and `git clone` the url.
